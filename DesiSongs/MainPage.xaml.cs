@@ -23,28 +23,30 @@ namespace DesiSongs
         public MainPage()
         {
             InitializeComponent();
-            ms = new MusicClient("d5117c1efbda09d54b21504d6cf2aa81", "3KeP3DIZIx58fmkutvLJ/AEloJFTu3q7Q9zlqfBJ5U4CsfrLsTGRTrUceacDgEMM");
+            
             // Sample code to localize the ApplicationBar
             //BuildLocalizedApplicationBar();
         }
 
         private void searchArtist(object sender, RoutedEventArgs e)
         {
+            ms = new MusicClient("d5117c1efbda09d54b21504d6cf2aa81");
+            MessageBox.Show(ms.AppId);
             Artist artist=new Artist();
-            ms.SearchArtists(
-  (ListResponse<Artist> artistResponse) =>
-  {
-      if (artistResponse.Count() > 0)
-      {
-           artist = artistResponse.First<Artist>(); //let's assume that the first returned artist is the one we're looking for
-      }
-      else
-      {
-          MessageBox.Show("Sorry, we couldn't find any artist named ");
-      }
-  }, "Akon");
+            ms.SearchArtists((ListResponse<Artist> artistResponse) =>
+                                    {
+                                          if (artistResponse.Count() > 0)
+                                          {
+                                               artist = artistResponse.First<Artist>(); //let's assume that the first returned artist is the one we're looking for
+                                               Deployment.Current.Dispatcher.BeginInvoke(() => this.Artist.Content = artist.Country );
+                                          }
+                                            else
+                                            {
+                                                MessageBox.Show("Sorry, we couldn't find any artist named ");
+                                            }
+                                     }, "Akon");
 
-            ms.GetArtistProducts(
+ /*           ms.GetArtistProducts(
   (ListResponse<Product> productResponse) =>
   {
       var songs = productResponse.Where((x) => //productResponse will include all products, not just songs. this will only return tracks and singles
@@ -73,7 +75,7 @@ namespace DesiSongs
       {
           MessageBox.Show("Sorry, we don't have song info for " + ArtistName);
       }
-  }, artist);
+  }, artist); */
         }
 
         // Sample code for building a localized ApplicationBar
