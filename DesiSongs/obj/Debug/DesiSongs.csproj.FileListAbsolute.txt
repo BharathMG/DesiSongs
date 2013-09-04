@@ -17,3 +17,9 @@ C:\Users\Bharath\Documents\Visual Studio 2012\Projects\DesiSongs\DesiSongs\obj\D
 C:\Users\Bharath\Documents\Visual Studio 2012\Projects\DesiSongs\DesiSongs\obj\Debug\DesiSongs.dll
 C:\Users\Bharath\Documents\Visual Studio 2012\Projects\DesiSongs\DesiSongs\obj\Debug\DesiSongs.pdb
 C:\Users\Bharath\Documents\Visual Studio 2012\Projects\DesiSongs\DesiSongs\obj\Debug\XapCacheFile.xml
+C:\Users\Bharath\Documents\Visual Studio 2012\Projects\DesiSongs\DesiSongs\Bin\Debug\Newtonsoft.Json.dll
+C:\Users\Bharath\Documents\Visual Studio 2012\Projects\DesiSongs\DesiSongs\Bin\Debug\Nokia.Music.Wp8.dll
+C:\Users\Bharath\Documents\Visual Studio 2012\Projects\DesiSongs\DesiSongs\Bin\Debug\SharpGIS.GZipWebClient.dll
+C:\Users\Bharath\Documents\Visual Studio 2012\Projects\DesiSongs\DesiSongs\Bin\Debug\Newtonsoft.Json.xml
+C:\Users\Bharath\Documents\Visual Studio 2012\Projects\DesiSongs\DesiSongs\Bin\Debug\Nokia.Music.Wp8.xml
+C:\Users\Bharath\Documents\Visual Studio 2012\Projects\DesiSongs\DesiSongs\obj\Debug\DesiSongs.csprojResolveAssemblyReference.cache

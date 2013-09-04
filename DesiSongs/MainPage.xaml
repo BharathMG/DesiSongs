@@ -47,6 +47,9 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <Button Content="Search Artist" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Width="280" Click="searchArtist"/>
+            <Button Content="Search Album" HorizontalAlignment="Left" Margin="0,87,0,0" VerticalAlignment="Top" Width="280"/>
+            <Button Content="Button" HorizontalAlignment="Left" Margin="0,164,0,0" VerticalAlignment="Top" Width="280"/>
 
         </Grid>
 
