@@ -13,6 +13,7 @@ using Windows.Phone.Speech.Synthesis;
 using Windows.Phone.Speech.Recognition;
 using Windows.Phone.Speech.VoiceCommands;
 using Nokia.Music.Types;
+using Nokia.Music.Tasks;
 
 namespace DesiSongs
 {
@@ -30,21 +31,24 @@ namespace DesiSongs
 
         private void searchArtist(object sender, RoutedEventArgs e)
         {
-            ms = new MusicClient("d5117c1efbda09d54b21504d6cf2aa81");
-            MessageBox.Show(ms.AppId);
-            Artist artist=new Artist();
-            ms.SearchArtists((ListResponse<Artist> artistResponse) =>
-                                    {
-                                          if (artistResponse.Count() > 0)
-                                          {
-                                               artist = artistResponse.First<Artist>(); //let's assume that the first returned artist is the one we're looking for
-                                               Deployment.Current.Dispatcher.BeginInvoke(() => this.Artist.Content = artist.Country );
-                                          }
-                                            else
-                                            {
-                                                MessageBox.Show("Sorry, we couldn't find any artist named ");
-                                            }
-                                     }, "Akon");
+
+            
+
+            //ms = new MusicClient("d5117c1efbda09d54b21504d6cf2aa81");
+            //MessageBox.Show(ms.AppId);
+            //Artist artist=new Artist();
+            //ms.SearchArtists((ListResponse<Artist> artistResponse) =>
+            //                        {
+            //                              if (artistResponse.Count() > 0)
+            //                              {
+            //                                   artist = artistResponse.First<Artist>(); //let's assume that the first returned artist is the one we're looking for
+            //                                   Deployment.Current.Dispatcher.BeginInvoke(() => this.Artist.Content = artist.Country );
+            //                              }
+            //                                else
+            //                                {
+            //                                    MessageBox.Show("Sorry, we couldn't find any artist named ");
+            //                                }
+            //                         }, "Akon");
 
  /*           ms.GetArtistProducts(
   (ListResponse<Product> productResponse) =>
@@ -76,6 +80,46 @@ namespace DesiSongs
           MessageBox.Show("Sorry, we don't have song info for " + ArtistName);
       }
   }, artist); */
+        }
+
+        private void ApplicationBarIconButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ApplicationBarMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Explore Nokia Music World easily with this application. Developed by Bharath MG");
+        }
+
+        private void listItemClicked(object sender, SelectionChangedEventArgs e)
+        {
+            ListBox list = sender as ListBox;
+            switch (list.SelectedIndex)
+            {
+                case 0:
+                    {
+                        NavigationService.Navigate(new Uri("/Page1.xaml", UriKind.Relative));
+                        break;
+                    }
+                case 1:
+                    {
+                        NavigationService.Navigate(new Uri("/Songs.xaml", UriKind.Relative));
+                        break;
+                    }
+                case 2:
+                    {
+                        NavigationService.Navigate(new Uri("/Mix.xaml", UriKind.Relative));
+                        break;
+                    }
+                case 3:
+                    {
+                        ShowGigsTask task = new ShowGigsTask();
+                        task.Show();
+                        break;
+                    }
+            }
+            list.SelectedIndex = -1;
         }
 
         // Sample code for building a localized ApplicationBar

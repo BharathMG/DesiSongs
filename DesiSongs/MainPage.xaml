@@ -41,15 +41,18 @@
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="DesiMusic" Style="{StaticResource PhoneTextNormalStyle}" Margin="12,0"/>
-            <TextBlock Text="Home" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock Text="DesiSongs" Style="{StaticResource PhoneTextNormalStyle}" Margin="12,0" Foreground="#FFFFF5F5"/>
+            <TextBlock Text="Home" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" Foreground="#FF15659C"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <Button x:Name="Artist" Content="Search Artist" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Width="280" Click="searchArtist"/>
-            <Button Content="Search Album" HorizontalAlignment="Left" Margin="0,87,0,0" VerticalAlignment="Top" Width="280"/>
-            <Button Content="Button" HorizontalAlignment="Left" Margin="0,164,0,0" VerticalAlignment="Top" Width="280"/>
+            <ListBox SelectionChanged="listItemClicked" Margin="10,0,0,0">
+                <ListBoxItem Content="Search Songs" Height="65" FontSize="40" />
+                <ListBoxItem Content="Search Artist" Height="65" FontSize="40" />
+                <ListBoxItem Content="Play Mix" Height="65" FontSize="40" />
+                <ListBoxItem Content="Gigs" Height="65" FontSize="40" />
+            </ListBox>
 
         </Grid>
 
@@ -61,5 +64,14 @@
             Before shipping remove this XAML and the image itself.-->
         <!--<Image Source="/Assets/AlignmentGrid.png" VerticalAlignment="Top" Height="800" Width="480" Margin="0,-32,0,0" Grid.Row="0" Grid.RowSpan="2" IsHitTestVisible="False" />-->
     </Grid>
+
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="about DesiSongs"   Click="ApplicationBarMenuItem_Click"/>
+                </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+        
+    </phone:PhoneApplicationPage.ApplicationBar>
 
 </phone:PhoneApplicationPage>

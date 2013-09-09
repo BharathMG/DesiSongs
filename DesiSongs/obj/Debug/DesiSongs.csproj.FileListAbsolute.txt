@@ -23,3 +23,7 @@ C:\Users\Bharath\Documents\Visual Studio 2012\Projects\DesiSongs\DesiSongs\Bin\D
 C:\Users\Bharath\Documents\Visual Studio 2012\Projects\DesiSongs\DesiSongs\Bin\Debug\Newtonsoft.Json.xml
 C:\Users\Bharath\Documents\Visual Studio 2012\Projects\DesiSongs\DesiSongs\Bin\Debug\Nokia.Music.Wp8.xml
 C:\Users\Bharath\Documents\Visual Studio 2012\Projects\DesiSongs\DesiSongs\obj\Debug\DesiSongs.csprojResolveAssemblyReference.cache
+C:\Users\Bharath\Documents\Visual Studio 2012\Projects\DesiSongs\DesiSongs\obj\Debug\Mix.g.cs
+C:\Users\Bharath\Documents\Visual Studio 2012\Projects\DesiSongs\DesiSongs\obj\Debug\Page1.g.cs
+C:\Users\Bharath\Documents\Visual Studio 2012\Projects\DesiSongs\DesiSongs\obj\Debug\Songs.g.cs
+C:\Users\Bharath\Documents\Visual Studio 2012\Projects\DesiSongs\DesiSongs\Bin\Debug\Microsoft.Phone.Controls.Toolkit.dll
